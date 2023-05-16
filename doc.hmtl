@@ -1,0 +1,33 @@
+Orden de instalacion
+
+Consola:
+npm init -y
+npm i 
+        express(plataforma) 
+        mongoose(base de datos) 
+        ejs(html/js)
+
+npm i method-override(para editar)
+npm i morgan (midleware)
+npm i ejs-mate
+npm i joi (para validar los esquemas, gestion de errores)doc= https://joi.dev/api/?v=17.7.0
+
+npm i cookie-parser
+
+npm i express-session
+
+npm i connect-flash
+
+Crear archivo:
+app.js
+
+REQUERIR REQUERIR Y CREAR SERVIDOR
+const express = require("express");
+const app = express();
+app.get("/", (req,res)=>{
+    res.send("HELLO FROM YELP CAMP!")
+})
+app.listen(3000, ()=>{
+    console.log("Servcing on port 3000")
+})
+

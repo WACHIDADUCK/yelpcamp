@@ -1,0 +1,27 @@
+<ul class="nav sticky-top nav-dark bg-dark">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/campgrounds">Campgrounds</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/campgrounds/new">New Campground</a>
+    </li>
+     <% if(!currentUser) {%>
+    <li class="nav-item ml-auto">
+      <a class="nav-link" href="/login">Login</a>
+    </li>
+    <li class="nav-item ml-auto">
+      <a class="nav-link" href="/register">Register</a>
+    </li>
+    <% }else { %>
+    <li class="nav-item ml-auto">
+      <a class="nav-link" href="/logout">Logout</a>
+    </li> 
+     <li class="nav-item ml-auto">
+      <a class="nav-link">Hello <%= currentUser.username %></p>
+    </li>
+    <% } %>
+    
+  </ul>
